@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  background: linear-gradient(270deg, #faf004, #f46b5f);
+  background-size: 400% 400%;
+  animation: AnimationName 20s ease infinite; }
+
+.cool {
+  height: 100vh;
+  background: url("../../img/tesselate2.svg") 0 0px repeat-x, url("../../img/tesselate2.svg") 87px 158px repeat-x, url("../../img/tesselate2.svg") 0 316px repeat-x, url("../../img/tesselate2.svg") 87px 474px repeat-x, url("../../img/tesselate2.svg") 0 632px repeat-x, url("../../img/tesselate2.svg") 87px 790px repeat-x, url("../../img/tesselate2.svg") 0 948px repeat-x, url("../../img/tesselate2.svg") 87px 1106px repeat-x; }
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }

@@ -1,0 +1,30 @@
+@mixin tesselate($offsetY){
+  $url_list: ();
+  $i: 0;
+  @while $i < 7 {
+    $url_string:
+      url('../../img/tesselate2.svg') 0 (($i) * $offsetY) repeat-x,
+      url('../../img/tesselate2.svg') 87px (($i + 1) * $offsetY) repeat-x;
+    $url_list:
+      append($url_list, $url_string, comma);
+    $i:$i+2;
+  }
+  background: $url_list;
+}
+
+body{
+  margin: 0;
+  background: linear-gradient(270deg, #faf004, #f46b5f);
+  background-size: 400% 400%;
+  animation: AnimationName 20s ease infinite;
+}
+.cool{
+  height: 100vh;
+  @include tesselate(158px);
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
